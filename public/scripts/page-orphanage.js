@@ -53,4 +53,3 @@ function selectImage(event) {
 }
 
 
-// iniciando o segundo dia
