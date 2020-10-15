@@ -51,3 +51,6 @@ function selectImage(event) {
   button.classList.add('active');
 
 }
+
+
+// iniciando o segundo dia
