@@ -1,3 +1,4 @@
+
 form {
     width: 70rem;
     margin: 6.4rem auto;
@@ -11,7 +12,7 @@ form {
 }
 
 fieldset {
-    border: 0;
+    border: 0;  
 }
 
 fieldset + fieldset {
@@ -22,7 +23,7 @@ fieldset legend {
     width: 100%;
 
     font-size: 3.2rem;
-    line-height: 1.5;
+    line-height:1.5;
 
     color: #5c8599;
     font-weight: 700;
@@ -37,7 +38,7 @@ fieldset legend {
 }
 
 .input-block label {
-    color: #8fa7b3;
+    color: #8FA7B3;
     margin-bottom: .8rem;
     line-height: 1.5;
 }
@@ -54,7 +55,7 @@ fieldset legend {
     width: 100%;
 
     background: #f5f8fa;
-    border: 1px solid #d3e2e5;
+    border: 1px solid  #d3e2e5;
     border-radius: 2rem;
 
     color: #5c8599;
@@ -67,7 +68,7 @@ fieldset legend {
 
 .input-block input:valid,
 .input-block textarea:valid {
-    border: 1px solid #a1e9c5;
+    border: 1px solid #A1E9C5;
 }
 
 .input-block textarea {
@@ -78,7 +79,7 @@ fieldset legend {
 }
 
 .input-block.images button {
-    border: 1px dashed #96d2f0;
+    border: 1px dashed #96D2F0;
     width: 100%;
     background: #f5f8fa;
     height: 6.4rem;
@@ -86,7 +87,7 @@ fieldset legend {
     margin-top: 2.4rem;
     border-radius: 2rem;
 
-    cursor: pointer;
+    cursor:pointer;
 }
 
 .new-upload {
@@ -100,16 +101,16 @@ fieldset legend {
 .new-upload span {
     position: absolute;
     right: 12px;
-    bottom: 12px;
-
-    background: #ffffff;
-
-    display: flex;
-
-    border: 1px solid #d3e2e5;
+    bottom: 14px;
+    background: #FFFFFF;
+    border: 1px solid #D3E2E5;
     box-sizing: border-box;
+    display: flex;
     border-radius: 10px;
     padding: .6rem;
 
     cursor: pointer;
 }
+
+
+

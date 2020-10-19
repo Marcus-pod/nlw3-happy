@@ -6,50 +6,55 @@ const options = {
     zoomControl: false
 }
 
-
 // create map
-const map = L.map('mapid', options).setView([-10.9360857, -37.0717485], 15);
+const map = L.map('mapid', options).setView([-27.222633,-49.6455874], 15)
 
-// create and add TileLayer
+// create and add tileLayer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+{
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+})
+.addTo(map)
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
 // create icon
 const icon = L.icon({
-  iconUrl: "/images/map-marker.svg",
-  iconSize: [58, 68],
-  iconAnchor: [29, 68],
-  popupAnchor: [170, 2]
+    iconUrl: "/images/map-marker.svg",
+    iconSize: [58, 68],
+    iconAnchor: [29, 68],
+    popupAnchor: [170, 2]
 })
 
 
 // create and add marker
-L.marker([-10.9360857, -37.0717485], { icon })
+L
+.marker([-27.222633,-49.6455874], { icon })
 .addTo(map)
+
 
 /* image gallery */
 
 function selectImage(event) {
-  const button = event.currentTarget
+    const button = event.currentTarget
 
-  // remover todas as classes active
-  const buttons = document.querySelectorAll(".images button")
-  buttons.forEach(removeActiveClass)
+    console.log(button.children)
 
-  function removeActiveClass(button) {
-    button.classList.remove("active")
-  }
+    // remover todas as classes .active
+    const buttons = document.querySelectorAll(".images button")
+    buttons.forEach(removeActiveClass)
 
-  // selecionar a imagem clicadas
-  const image = button.children[0]
-  const imageContainer = document.querySelector(".orphanage-details > img")
-  
-  // atualizar o container de imagem
-  imageContainer.src = image.src
+    function removeActiveClass(button) {
+        button.classList.remove("active")
+    }
 
-  // adicionar a classe .active para o botão clicado
-  button.classList.add('active');
+    // selecionar a image clicada
+    const image = button.children[0]
+    const imageContainer = document.querySelector(".orphanage-details > img")
+
+    // atualizar o container de image
+    imageContainer.src = image.src
+
+    // adicionar a classe .active para este botao
+    button.classList.add('active')
 
 }
-
-
